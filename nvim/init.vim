@@ -57,6 +57,7 @@ source ~/.config/nvim/plugins/toggleterm.vim
 source ~/.config/nvim/plugins/tokionight.vim
 source ~/.config/nvim/plugins/vim-airline.vim
 source ~/.config/nvim/plugins/vim-devicons.vim
+source ~/.config/nvim/plugins/vim-rooter.vim
 source ~/.config/nvim/plugins/vim-submode.vim
 source ~/.config/nvim/plugins/vim-wakatime.vim
 
@@ -73,4 +74,5 @@ call SubmodeSetup()
 call TelescopeSetup()
 call ToggleTermSetup()
 call TokioNightSetup()
+call VimRooterSetup()
 

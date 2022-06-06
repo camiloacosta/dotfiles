@@ -12,6 +12,7 @@ function! s:gitUntracked()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
+let g:startify_change_to_dir = 0
 
 let g:startify_lists = [
       \ { 'type': function('s:gitModified'), 'header': [header_padding . 'Git modified'] },
