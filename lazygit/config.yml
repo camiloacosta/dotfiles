@@ -1,0 +1,6 @@
+gui:
+  theme:
+    activeBorderColor:
+      - blue
+      - bold
+
