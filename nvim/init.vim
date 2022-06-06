@@ -5,28 +5,26 @@ set number
 set relativenumber
 set autoindent
 
-set tabstop=2                                     " columnas por tab 
-set shiftwidth=2                                  " niveles de indentación
-set expandtab                                     " expande los tabs a espacios
+set tabstop=2                                     " Tabs per column
+set shiftwidth=2                                  " Indent levels
+set expandtab                                     " Expands tabs to spaces
 set shiftround
 set nowrap
 set scrolloff=8
 set sidescrolloff=16
 
-set mouse=a                                       " mouse interactivo con la terminal
+set mouse=a                                       " Interactive mouse with the terminal
 set cursorline
 
 set colorcolumn=120
-highlight ColorColumn ctermbg=24
 
-set title                                         " definie el titulo de la ventana con el nombre del archivo
-set hidden                                        " no cierra los archivos, pero los oculta
+set title                                         " Set window title with file name
 set list listchars=tab:»·,trail:·,nbsp:·
 set splitright
-" set splitbelow
+set splitbelow
 
-set ignorecase                                    " ignora las mayusculas en la búsqueda
-set smartcase                                     " incluye las mayusculas en las búsquedas cuando está en el query
+set ignorecase                                    " Ignores case on search
+set smartcase                                     " Includes case when there is any on query
 set clipboard=unnamed
 
 " Install vim-plug if not present.
@@ -56,16 +54,14 @@ source ~/.config/nvim/plugins/startify.vim
 source ~/.config/nvim/plugins/plenary-nvim.vim
 source ~/.config/nvim/plugins/telescope-nvim.vim
 source ~/.config/nvim/plugins/toggleterm.vim
+source ~/.config/nvim/plugins/tokionight.vim
 source ~/.config/nvim/plugins/vim-airline.vim
 source ~/.config/nvim/plugins/vim-devicons.vim
 source ~/.config/nvim/plugins/vim-submode.vim
 source ~/.config/nvim/plugins/vim-wakatime.vim
 
-Plug 'rafi/awesome-vim-colorschemes'
-
 call plug#end()
 filetype plugin indent on
-
 
 
 " ---
@@ -75,4 +71,5 @@ filetype plugin indent on
 call NvimTreeSetup()
 call SubmodeSetup()
 call TelescopeSetup()
+call TokioNightSetup()
 
