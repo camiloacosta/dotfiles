@@ -12,4 +12,8 @@ nnoremap gf <C-w>gf                           " Go to file on new tab
 " --- Plugins maps
 " ---
 
-map <C-`> :echo "si"
+" --- ToggleTerm
+inoremap <C-\> <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
+nnoremap <C-\> :ToggleTerm dir=git_dir direction=float<CR>
+tnoremap <C-\> <Cmd>ToggleTerm<CR>
+

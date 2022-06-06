@@ -71,5 +71,6 @@ filetype plugin indent on
 call NvimTreeSetup()
 call SubmodeSetup()
 call TelescopeSetup()
+call ToggleTermSetup()
 call TokioNightSetup()
 
