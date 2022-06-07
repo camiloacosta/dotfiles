@@ -9,8 +9,11 @@ nnoremap <leader><Bar> :vsplit<CR>            " Split vertically
 nnoremap <leader>b :call NvimTreeOpenOrToggle()<CR>
 nnoremap <leader>t :Telescope git_files<CR>
 nnoremap gf <C-w>gf                           " Go to file on new tab
+nnoremap < <<                                 " indent manually
+nnoremap > >>
 
 inoremap jj <Esc>
+
 " ---
 " --- Plugins maps
 " ---
