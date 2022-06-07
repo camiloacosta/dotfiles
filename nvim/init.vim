@@ -26,6 +26,9 @@ set splitbelow
 set ignorecase                                    " Ignores case on search
 set smartcase                                     " Includes case when there is any on query
 set clipboard=unnamed
+set fileencoding=utf-8
+set updatetime=3000
+
 
 " Install vim-plug if not present.
 if empty(glob(nvim_dir . '/autoload/plug.vim'))

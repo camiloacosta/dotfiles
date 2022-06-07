@@ -10,6 +10,7 @@ nnoremap <leader>b :call NvimTreeOpenOrToggle()<CR>
 nnoremap <leader>t :Telescope git_files<CR>
 nnoremap gf <C-w>gf                           " Go to file on new tab
 
+inoremap jj <Esc>
 " ---
 " --- Plugins maps
 " ---
@@ -19,3 +20,6 @@ inoremap <C-\> <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
 nnoremap <C-\> :ToggleTerm dir=git_dir direction=float<CR>
 tnoremap <C-\> <Cmd>ToggleTerm<CR>
 
+" --- COC
+nmap <silent> gd <Plug>(coc-definition)
+inoremap <silent><expr> <c-space> coc#refresh()

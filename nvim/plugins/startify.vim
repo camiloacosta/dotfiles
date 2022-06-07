@@ -15,9 +15,9 @@ endfunction
 let g:startify_change_to_dir = 0
 
 let g:startify_lists = [
+      \ { 'type': 'sessions', 'header': [header_padding . 'Sessions'] },
       \ { 'type': function('s:gitModified'), 'header': [header_padding . 'Git modified'] },
       \ { 'type': function('s:gitUntracked'), 'header': [header_padding . 'Git untracked'] },
       \ { 'type': 'dir', 'header': [header_padding . getcwd()] },
-      \ { 'type': 'sessions', 'header': [header_padding . 'Sessions'] },
       \ ]
 
