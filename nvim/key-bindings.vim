@@ -1,18 +1,27 @@
 let g:mapleader = ' '
 
-nnoremap <Esc> :nohlsearch<CR>
-nnoremap <leader> <Nop>
-nmap <leader>s :w<CR>                         " Save file
-nnoremap <leader>w <C-w>c                     " Close current buffer
-nnoremap <leader>q :confirm qa<CR>            " Close current buffer
-nnoremap <leader><Bar> :vsplit<CR>            " Split vertically
-nnoremap <leader>b :call NvimTreeOpenOrToggle()<CR>
-nnoremap <leader>t :Telescope git_files<CR>
-nnoremap gf <C-w>gf                           " Go to file on new tab
-nnoremap < <<                                 " indent manually
-nnoremap > >>
+" ---
+" --- Leader Mappings
+" ---
+nmap     <leader>s        :w<CR>                              " Save file
+nnoremap <leader>q        :confirm qa<CR>                     " Close current buffer
+nnoremap <leader>         <Nop>
+nnoremap <leader>w        <C-w>c                              " Close current buffer
+nnoremap <leader><Bar>    :vsplit<CR>                         " Split vertically
+nnoremap <leader>b        :call NvimTreeOpenOrToggle()<CR>
+nnoremap <leader>p        :Telescope git_files<CR>
+nnoremap <leader><S-f>    :Telescope live_grep<CR>
 
-inoremap jj <Esc>
+" ---
+" --- Other mappings
+" ---
+nnoremap <Esc>            :nohlsearch<CR>
+nnoremap gf               <C-w>gf                            " Go to file on new tab
+inoremap jj               <Esc>
+vnoremap u                <Nop>
+vnoremap U                <Nop>
+nnoremap <                <<                                 " indent manually
+nnoremap >                >>
 
 " ---
 " --- Plugins maps
