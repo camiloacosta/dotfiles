@@ -1,0 +1,30 @@
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+export AUTO_NOTIFY_THRESHOLD=20
+export AUTO_NOTIFY_TITLE="Hey! \`%command\` ya terminó"
+export AUTO_NOTIFY_BODY="Se completó en %elapsed seconds con exit code %exit_code"
+
+
+ANTIGEN=~/antigen.zsh
+SECRETS=~/.secrets
+
+if test -f "$SECRETS"; then
+  source $SECRETS
+fi
+
+if test -f "$ANTIGEN"; then
+    source $ANTIGEN
+
+    antigen use oh-my-zsh
+    antigen bundle git
+
+    # Theme
+    antigen theme romkatv/powerlevel10k
+
+    # plugins
+    antigen bundle "MichaelAquilina/zsh-auto-notify"
+    antigen bundle zsh-users/zsh-autosuggestions
+
+    antigen apply
+fi
+
+
