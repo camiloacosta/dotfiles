@@ -61,6 +61,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/auto-pairs.vim
+source ~/.config/nvim/plugins/bufferline.vim
 source ~/.config/nvim/plugins/coc-nvim.vim
 source ~/.config/nvim/plugins/editorconfig-vim.vim
 source ~/.config/nvim/plugins/gitsigns.vim
@@ -88,6 +89,7 @@ call plug#end()
 " --- Plugins setup
 " --- 
 
+call BufferLineSetup()
 call LualineSetup()
 call NvimTreeSetup()
 call SubmodeSetup()
