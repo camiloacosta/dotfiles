@@ -29,10 +29,14 @@ nmap zz                   za                                 " Toggles floding
 " ---
 
 " --- ToggleTerm
-inoremap <C-\> <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
-nnoremap <C-\> :ToggleTerm dir=git_dir direction=float<CR>
-tnoremap <C-\> <Cmd>ToggleTerm<CR>
+inoremap <C-\>           <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
+nnoremap <C-\>           :ToggleTerm dir=git_dir direction=float<CR>
+tnoremap <C-\>           <Cmd>ToggleTerm<CR>
 
 " --- COC
-nmap <silent> gd <Plug>(coc-definition)
-inoremap <silent><expr> <c-space> coc#refresh()
+nmap <silent> gd         <Plug>(coc-definition)
+inoremap <silent><expr>  <c-space> coc#refresh()
+
+" --- Trouble
+nnoremap <leader>xx      <Cmd>TroubleToggle loclist<CR>
+
