@@ -10,8 +10,8 @@ set shiftwidth=2                                  " Indent levels
 set expandtab                                     " Expands tabs to spaces
 set shiftround
 set nowrap
-set scrolloff=8
-set sidescrolloff=16
+set scrolloff=16
+set sidescrolloff=32
 
 set mouse=a                                       " Interactive mouse with the terminal
 set cursorline
@@ -28,6 +28,14 @@ set smartcase                                     " Includes case when there is 
 set clipboard=unnamed
 set fileencoding=utf-8
 set updatetime=3000
+set foldmethod=syntax
+set foldcolumn=1
+set foldlevelstart=99
+let javascript_fold=1
+
+set fillchars+=diff:╱
+filetype indent plugin on
+syntax on
 
 
 " Install vim-plug if not present.
@@ -51,31 +59,41 @@ source ~/.config/nvim/key-bindings.vim
 
 call plug#begin('~/.config/nvim/plugged')
 
+source ~/.config/nvim/plugins/ale.vim
+source ~/.config/nvim/plugins/auto-pairs.vim
 source ~/.config/nvim/plugins/coc-nvim.vim
+source ~/.config/nvim/plugins/editorconfig-vim.vim
+source ~/.config/nvim/plugins/gitsigns.vim
+source ~/.config/nvim/plugins/lualine.vim
 source ~/.config/nvim/plugins/nvim-tree.vim
-source ~/.config/nvim/plugins/startify.vim
 source ~/.config/nvim/plugins/plenary-nvim.vim
+source ~/.config/nvim/plugins/startify.vim
 source ~/.config/nvim/plugins/telescope-nvim.vim
 source ~/.config/nvim/plugins/toggleterm.vim
 source ~/.config/nvim/plugins/tokionight.vim
-source ~/.config/nvim/plugins/vim-airline.vim
+source ~/.config/nvim/plugins/vim-commentary.vim
 source ~/.config/nvim/plugins/vim-devicons.vim
+source ~/.config/nvim/plugins/vim-expand-region.vim
+source ~/.config/nvim/plugins/vim-pasta.vim
 source ~/.config/nvim/plugins/vim-rooter.vim
 source ~/.config/nvim/plugins/vim-submode.vim
+source ~/.config/nvim/plugins/vim-subversive.vim
+source ~/.config/nvim/plugins/trouble.vim
 source ~/.config/nvim/plugins/vim-wakatime.vim
 
 call plug#end()
-filetype plugin indent on
 
 
 " ---
 " --- Plugins setup
 " --- 
 
+call LualineSetup()
 call NvimTreeSetup()
 call SubmodeSetup()
 call TelescopeSetup()
 call ToggleTermSetup()
 call TokioNightSetup()
+call TroubleSetup()
 call VimRooterSetup()
 

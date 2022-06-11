@@ -20,8 +20,9 @@ nnoremap gf               <C-w>gf                            " Go to file on new
 inoremap jj               <Esc>
 vnoremap u                <Nop>
 vnoremap U                <Nop>
-nnoremap <                <<                                 " indent manually
-nnoremap >                >>
+nmap <                    <<                                 " indent manually
+nmap >                    >>
+nmap zz                   za                                 " Toggles floding
 
 " ---
 " --- Plugins maps
