@@ -28,6 +28,9 @@ nmap zz                   za                                 " Toggles floding
 " --- Plugins maps
 " ---
 
+" --- Telescope
+nnoremap <leader><Tab><Tab> :Telescope buffers<CR>
+
 " --- ToggleTerm
 inoremap <C-\>           <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
 nnoremap <C-\>           :ToggleTerm dir=git_dir direction=float<CR>

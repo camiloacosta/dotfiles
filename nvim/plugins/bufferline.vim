@@ -15,6 +15,7 @@ local colors = {
 require("bufferline").setup {
   options = {
     mode = 'tabs',
+    always_show_bufferline = false,
     indicator_icon = ' ',
     separator_style = 'slant',
     offsets = {

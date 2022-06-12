@@ -24,9 +24,8 @@ endfunction
 function! TabChanging()
   call submode#enter_with('TabChanging', 'n', '', '<leader><Tab>')
 
-  call submode#map('TabChanging', 'n', '', '<Tab>', ':tabnext<CR>')
-  call submode#map('TabChanging', 'n', '', '<Right>', ':tabnext<CR>')
-  call submode#map('TabChanging', 'n', '', '<Left>', ':tabprevious<CR>')
+  call submode#map('TabChanging', 'n', '', '<Right>', ':BufferLineCycleNext<CR>')
+  call submode#map('TabChanging', 'n', '', '<Left>', ':BufferLineCyclePrev<CR>')
 endfunction
 
 function! EasyQuitBuffer()
