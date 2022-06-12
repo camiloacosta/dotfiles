@@ -19,6 +19,7 @@ set cursorline
 set colorcolumn=120
 
 set title                                         " Set window title with file name
+set hidden                                        " Don't close buffers, but hides them
 set list listchars=tab:»·,trail:·,nbsp:·
 set splitright
 set splitbelow
@@ -55,7 +56,7 @@ source ~/.config/nvim/key-bindings.vim
 
 " ---
 " --- Plugins 
-" --- 
+" ---
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -67,6 +68,7 @@ source ~/.config/nvim/plugins/editorconfig-vim.vim
 source ~/.config/nvim/plugins/gitsigns.vim
 source ~/.config/nvim/plugins/lualine.vim
 source ~/.config/nvim/plugins/nvim-tree.vim
+source ~/.config/nvim/plugins/nvim-treesitter.vim
 source ~/.config/nvim/plugins/plenary-nvim.vim
 source ~/.config/nvim/plugins/startify.vim
 source ~/.config/nvim/plugins/telescope-nvim.vim
@@ -87,7 +89,7 @@ call plug#end()
 
 " ---
 " --- Plugins setup
-" --- 
+" ---
 
 call BufferLineSetup()
 call LualineSetup()
@@ -96,6 +98,7 @@ call SubmodeSetup()
 call TelescopeSetup()
 call ToggleTermSetup()
 call TokioNightSetup()
+call TreeSitterSetup()
 call TroubleSetup()
 call VimRooterSetup()
 

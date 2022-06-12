@@ -2,7 +2,9 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 function! NvimTreeSetup()
 lua << EOF
-require'nvim-tree'.setup {
+local nvim = require('nvim-tree')
+
+nvim.setup {
   open_on_tab = false, -- keep this on false, but remap enter to open on new tab
   view = {
     width = 35,
@@ -19,6 +21,11 @@ require'nvim-tree'.setup {
   },
   update_focused_file = {
     enable = true,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true
+    }
   }
 }
 EOF

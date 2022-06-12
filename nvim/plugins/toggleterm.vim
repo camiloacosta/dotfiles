@@ -21,7 +21,6 @@ lua << EOF
 local Terminal = require('ToggleTerm.terminal').Terminal
 local command = 'npm t -- ' .. vim.t.testArgsStr
 local jest = Terminal:new({ cmd = command, hidden = true, direction = 'horizontal', close_on_exit = false })
--- local lg = terminal:new({ cmd = 'lazygit', hidden = false, direction = 'float' })
 jest:toggle()
 EOF
 endfunction
