@@ -30,6 +30,7 @@ nmap zz                   za                                 " Toggles floding
 
 " --- Telescope
 nnoremap <leader><Tab><Tab> :Telescope buffers<CR>
+nnoremap <leader>f        :Telescope current_buffer_fuzzy_find theme=dropdown sorting_strategy=ascending <CR>
 
 " --- ToggleTerm
 inoremap <C-\>           <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
