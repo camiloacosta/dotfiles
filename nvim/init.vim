@@ -92,6 +92,7 @@ call plug#end()
 " ---
 
 call BufferLineSetup()
+call GitSignsSetup()
 call LualineSetup()
 call NvimTreeSetup()
 call SubmodeSetup()
