@@ -8,29 +8,34 @@ nnoremap <leader>q        :confirm qa<CR>                     " Close current bu
 nnoremap <leader>         <Nop>
 nnoremap <leader>w        <C-w>c                              " Close current buffer
 nnoremap <leader><Bar>    :vsplit<CR>                         " Split vertically
-nnoremap <leader>b        :call NvimTreeOpenOrToggle()<CR>
-nnoremap <leader>p        :Telescope git_files<CR>
-nnoremap <leader><S-f>    :Telescope live_grep<CR>
+vnoremap <leader>f        "*yq/p<CR>                          " Yank and search selection
 
 " ---
 " --- Other mappings
 " ---
 nnoremap <Esc>            :nohlsearch<CR>
 nnoremap gf               <C-w>gf                            " Go to file on new tab
-inoremap jj               <Esc>
+imap jj                   <Esc>
 vnoremap u                <Nop>
 vnoremap U                <Nop>
 nmap <                    <<                                 " indent manually
 nmap >                    >>
 nmap zz                   za                                 " Toggles floding
 
+
 " ---
 " --- Plugins maps
 " ---
 
+
+" --- NvimTree
+nnoremap <leader>b        :call NvimTreeOpenOrToggle()<CR>
+
 " --- Telescope
 nnoremap <leader><Tab><Tab> :Telescope buffers<CR>
-nnoremap <leader>f        :Telescope current_buffer_fuzzy_find theme=dropdown sorting_strategy=ascending <CR>
+nnoremap <leader>f        :Telescope current_buffer_fuzzy_find theme=dropdown sorting_strategy=ascending<CR>
+nnoremap <leader>p        :Telescope git_files<CR>
+nnoremap <leader><S-f>    :Telescope live_grep<CR>
 
 " --- ToggleTerm
 inoremap <C-\>           <Esc><Cmd>ToggleTerm dir=git_dir direction=float<CR>
