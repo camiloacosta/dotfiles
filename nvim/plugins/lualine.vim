@@ -4,7 +4,7 @@ function! LualineSetup()
 lua << EOF
 require('lualine').setup {
   options = {
-    theme = "tokionight"
+    theme = "tokyonight"
   }
 }
 EOF

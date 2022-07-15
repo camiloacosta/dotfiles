@@ -35,7 +35,7 @@ set foldlevelstart=99
 let javascript_fold=1
 
 set fillchars+=diff:╱
-filetype indent plugin on
+" filetype indent plugin on
 syntax on
 
 
@@ -64,6 +64,7 @@ source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/auto-pairs.vim
 source ~/.config/nvim/plugins/bufferline.vim
 source ~/.config/nvim/plugins/coc-nvim.vim
+source ~/.config/nvim/plugins/diffview-nvim.vim
 source ~/.config/nvim/plugins/editorconfig-vim.vim
 source ~/.config/nvim/plugins/gitsigns.vim
 source ~/.config/nvim/plugins/lualine.vim
@@ -88,10 +89,16 @@ call plug#end()
 
 
 " ---
+" --- Auto Command
+" ---
+
+
+" ---
 " --- Plugins setup
 " ---
 
 call BufferLineSetup()
+call DiffviewSetup()
 call GitSignsSetup()
 call LualineSetup()
 call NvimTreeSetup()

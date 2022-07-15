@@ -5,8 +5,8 @@ lua << EOF
 require('gitsigns').setup {
   signcolumn = true,
   numhl = true,
-  linehl = true,
-  word_diff = true,
+  -- linehl = true,
+  -- word_diff = true,
   current_line_blame = true,
   current_line_blame_opts = {
     delay = 500
