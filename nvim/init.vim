@@ -29,10 +29,9 @@ set smartcase                                     " Includes case when there is 
 set clipboard=unnamed
 set fileencoding=utf-8
 set updatetime=3000
-set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=99
-let javascript_fold=1
+let javascript_mfold=1
 
 set fillchars+=diff:╱
 " filetype indent plugin on
@@ -69,6 +68,7 @@ source ~/.config/nvim/plugins/editorconfig-vim.vim
 source ~/.config/nvim/plugins/gitsigns.vim
 source ~/.config/nvim/plugins/lualine.vim
 source ~/.config/nvim/plugins/nvim-tree.vim
+source ~/.config/nvim/plugins/nvim-lspconfig.vim
 source ~/.config/nvim/plugins/nvim-treesitter.vim
 source ~/.config/nvim/plugins/plenary-nvim.vim
 source ~/.config/nvim/plugins/startify.vim
@@ -101,6 +101,7 @@ call BufferLineSetup()
 call DiffviewSetup()
 call GitSignsSetup()
 call LualineSetup()
+call NvimLSPConfigSetup()
 call NvimTreeSetup()
 call SubmodeSetup()
 call TelescopeSetup()

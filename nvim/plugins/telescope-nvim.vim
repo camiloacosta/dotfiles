@@ -1,4 +1,5 @@
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 function! TelescopeSetup()
 lua << EOF
@@ -25,7 +26,17 @@ telescope.setup {
       }
     }
   },
+
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true
+    }
+  }
 }
+
+require('telescope').load_extension('fzf')
 EOF
 endfunction
 

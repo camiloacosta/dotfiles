@@ -43,8 +43,18 @@ nnoremap <C-\>           :ToggleTerm dir=git_dir direction=float<CR>
 tnoremap <C-\>           <Cmd>ToggleTerm<CR>
 
 " --- COC
-nmap <silent> gd         <Plug>(coc-definition)
-inoremap <silent><expr>  <c-space> coc#refresh()
+" nmap <silent> gd         <Plug>(coc-definition)
+" inoremap <silent><expr>  <c-space> coc#refresh()
+
+" --- LSP Config
+nmap <silent>gd         :lua vim.lsp.buf.definition()<cr>
+nmap <silent>gD         :lua vim.lsp.buf.declaration()<cr>
+nmap <silent>K          :lua vim.lsp.buf.hover()<cr>
+nmap <silent><F2>       :lua vim.lsp.buf.rename()<cr>
+" inoremap <silent><expr> <C-Space> <cmd>lua vim.lsp.buf.complete()<cr>
+
+
+
 
 " --- Trouble
 nnoremap <leader>xx      <Cmd>TroubleToggle loclist<CR>
