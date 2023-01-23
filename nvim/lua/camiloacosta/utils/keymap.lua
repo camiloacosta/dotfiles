@@ -22,4 +22,10 @@ M.nmap = function(key, cmd, opts) M.map("n", key, cmd, opts) end
 ---@param opts? table
 M.imap = function(key, cmd, opts) M.map("i", key, cmd, opts) end
 
+--- creates an visual keymap
+---@param key string
+---@param cmd function | string
+---@param opts? table
+M.vmap = function(key, cmd, opts) M.map("v", key, cmd, opts) end
+
 return M

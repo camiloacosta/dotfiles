@@ -14,13 +14,13 @@ return {
           scroll_strategy = 'limit',
           mappings = {
             i = {
-              ["<C-d>"] = actions.delete_buffer,
               ["<CR>"] = actions.select_default,
-              ["t"] = actions.select_tab,
-              ["s"] = actions.select_vertical,
-              ["S"] = actions.select_horizontal,
               ["<ESC>"] = "close",
-              ["<C-h>"] = "which_key"
+              ["<C-d>"] = actions.delete_buffer,
+              ["<C-t>"] = actions.select_tab,
+              ["<C-s>"] = actions.select_vertical,
+              ["<C-h>"] = actions.select_horizontal,
+              ["<C-?>"] = "which_key"
             }
           }
         },
