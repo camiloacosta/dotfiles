@@ -1,2 +1,0 @@
-Plug 'svermeulen/vim-subversive'
-
