@@ -1,3 +1,5 @@
+local icons = require"camiloacosta.utils.icons"
+
 return {
   -- Tree sitter
   {
@@ -33,9 +35,9 @@ return {
     config = {
       ui = {
         icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗"
+          package_installed = icons.progress_check,
+          package_pending = icons.progress_download,
+          package_uninstalled = icons.progress_download
         }
       },
       max_concurrent_installers = 4,
@@ -55,8 +57,11 @@ return {
   -- Completer
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {"onsails/lspkind.nvim"},
     config = function()
       local cmp = require"cmp"
+      local lspkind = require"lspkind"
+
       cmp.setup{
         snippet = {
           expand = function(args)
@@ -85,6 +90,14 @@ return {
 
         experimental = {
           ghost_text = true,
+        },
+
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = "symbol",
+            maxwidth = 50,
+            ellipsis_char = "…"
+          })
         },
       }
     end
