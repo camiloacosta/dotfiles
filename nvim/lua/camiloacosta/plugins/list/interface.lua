@@ -1,5 +1,18 @@
 return {
+  -- starter
   {
+    "echasnovski/mini.starter",
+    version = "*",
+    config = function ()
+      local starter = require"mini.starter"
+      starter.setup {
+        items = {
+          starter.sections.sessions(5, true),
+          starter.sections.recent_files(10, true, true),
+          starter.sections.builtin_actions(),
+        },
+      }
+    end
   },
   -- status line
   {

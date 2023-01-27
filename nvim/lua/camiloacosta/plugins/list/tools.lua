@@ -35,4 +35,12 @@ return {
       require"telescope".load_extension"fzf"
     end
   },
+  -- sessions
+  {
+    'echasnovski/mini.sessions',
+    version = '*',
+    config = function ()
+      require"mini.sessions".setup()
+    end
+  },
 }
