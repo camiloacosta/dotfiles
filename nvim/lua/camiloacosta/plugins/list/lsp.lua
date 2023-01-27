@@ -114,4 +114,29 @@ return {
   "hrsh7th/cmp-cmdline",
   "L3MON4D3/LuaSnip",
   "saadparwaiz1/cmp_luasnip",
+
+  -- Auto pairs
+  {
+    "windwp/nvim-autopairs",
+    config = function ()
+      require"nvim-autopairs".setup()
+    end,
+  },
+
+  -- Auto tags
+  {
+    "windwp/nvim-ts-autotag",
+    config = function ()
+      require"nvim-ts-autotag".setup()
+    end
+  },
+
+  -- Surroundings
+  {
+    "kylechui/nvim-surround",
+    tag = "v1.0.0",
+    config = function (_, c)
+      require"nvim-surround".setup(c)
+    end
+  }
 }
