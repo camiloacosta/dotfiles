@@ -27,6 +27,11 @@ return {
     },
     config = function (_, c)
       require"nvim-treesitter.configs".setup(c)
+
+
+      vim.opt.foldmethod = "expr"
+      vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+      vim.opt.foldlevelstart = 99
     end
   },
   -- LSP Servers installer
