@@ -43,8 +43,13 @@ return {
       require"mini.sessions".setup()
     end
   },
+  -- diffview
   {
     "sindrets/diffview.nvim",
-    dependencies = "nvim-lua/plenary.nvim"
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function (_, c)
+      require"diffview".setup(c)
+      vim.cmd("set fillchars+=diff:╱")
+    end
   }
 }
