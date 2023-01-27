@@ -6,6 +6,11 @@ local km = require"camiloacosta.utils.keymap"
 km.nmap("<leader>ff", builtin.find_files, { desc = "[F]ind [F]iles" })
 km.nmap("<leader>lg", builtin.live_grep, { desc = "[L]ive [G]rep" })
 km.nmap("<leader>lb", builtin.buffers, { desc = "[L]ist [B]uffers" })
+
+km.nmap("<leader>fd", function ()
+  builtin.diagnostics({ bufnr = 0 })
+end, { desc = "[F]ind [D]iagnostics" })
+
 km.nmap("<leader>fh", function()
   builtin.oldfiles(
     get_dropdown({ winblend = 20, previewer = false })
