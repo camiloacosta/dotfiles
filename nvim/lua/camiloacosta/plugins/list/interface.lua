@@ -48,15 +48,6 @@ return {
         }
       }
     },
-    config = function (_, c)
-      local icons = require"camiloacosta.utils.icons"
-      vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-      vim.fn.sign_define("DiagnosticSignError", {text =icons.danger .. " ", texthl = "DiagnosticSignError"})
-      vim.fn.sign_define("DiagnosticSignWarn", {text = icons.warning .. " ", texthl = "DiagnosticSignWarn"})
-      vim.fn.sign_define("DiagnosticSignInfo", {text = icons.info .. " ", texthl = "DiagnosticSignInfo"})
-      vim.fn.sign_define("DiagnosticSignHint", {text = icons.hint .. " ", texthl = "DiagnosticSignHint"})
-      require"neo-tree".setup(c)
-    end
   }
 }
 
