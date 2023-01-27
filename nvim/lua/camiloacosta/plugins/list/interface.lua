@@ -33,6 +33,7 @@ return {
       "MunifTanjim/nui.nvim",
     },
     opts = {
+      hide_root_node = true, -- hide the root node
       window = {
         width = 40,
       },
