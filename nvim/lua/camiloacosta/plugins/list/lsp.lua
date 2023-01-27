@@ -1,6 +1,33 @@
 return {
-  -- { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-  -- "nvim-treesitter/playground",
+  -- Tree sitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    opts = {
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false
+      },
+      --indent = {
+      --  enable = true,
+      --},
+      --autotag = {
+      --  enable = true,
+      --},
+      auto_install = true,
+      ensure_installed = {
+        "lua",
+        "vim",
+        "help",
+        "javascript",
+        "typescript",
+      }
+    },
+    config = function (_, c)
+      require"nvim-treesitter.configs".setup(c)
+    end
+  },
+  -- LSP Servers installer
   {
     "williamboman/mason.nvim",
     config = {
@@ -14,8 +41,18 @@ return {
       max_concurrent_installers = 4,
     }
   },
-  "williamboman/mason-lspconfig.nvim",
-  "neovim/nvim-lspconfig",
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function () end -- Prevent setup
+  },
+
+  -- LSP Servers
+  {
+    "neovim/nvim-lspconfig",
+    config = function () end -- prevent setup before mason
+  },
+
+  -- Completer
   {
     "hrsh7th/nvim-cmp",
     config = function()

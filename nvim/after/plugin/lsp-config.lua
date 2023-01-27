@@ -1,17 +1,24 @@
 -- LSP server
 local lsp_servers = {
   sumneko_lua = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { 'vim' }
+        }
       }
     }
   },
   "rust_analyzer",
+  tsserver = {
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact" },
+    cmd = { "typescript-language-server", "--stdio" }
+  },
 }
 
 require"mason-lspconfig".setup {
-  ensure_installed = lsp_servers
+  ensure_installed = lsp_servers,
+  automatic_installation = true,
 }
 
 local lsp = require"lspconfig"
@@ -47,11 +54,10 @@ for indexOrServer, serverOrConfig in pairs(lsp_servers) do
   local server_settings = has_config and serverOrConfig or {}
   local server = has_config and indexOrServer or serverOrConfig
 
-  lsp[server].setup {
+  lsp[server].setup(merge({
     capabilities = cmp_lsp.default_capabilities(),
     on_attach = on_attach,
-    settings = server_settings
-  }
+  }, server_settings))
 end
 
 --- Setup cmp
