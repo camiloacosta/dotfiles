@@ -16,3 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("camiloacosta.plugins.list")
 
+-- select theme
+vim.cmd("colorscheme catppuccin-macchiato")
+

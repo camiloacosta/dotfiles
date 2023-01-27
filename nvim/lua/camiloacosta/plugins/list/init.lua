@@ -1,6 +1,7 @@
 local plugins = {
   require"camiloacosta.plugins.list.lsp",
   require"camiloacosta.plugins.list.interface",
+  require"camiloacosta.plugins.list.themes",
   require"camiloacosta.plugins.list.tools",
 }
 
