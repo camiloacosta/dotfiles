@@ -23,6 +23,11 @@ return {
       }
     }
   },
+  -- Tabby
+  {
+    "nanozuki/tabby.nvim",
+    opts = {}
+  },
   -- File explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
