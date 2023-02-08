@@ -21,3 +21,7 @@ km.nmap(">", ">>", { desc = "Indent manually" })
 -- Go to
 km.nmap("gf", "<C-w>gf", { desc = "[G]o to [F]ile" })
 
+-- Move tabs
+km.nmap("<S-PageUp>", ":-tabmove<CR>", { desc = "Move current tab to previous position" })
+km.nmap("<S-PageDown>", ":+tabmove<CR>", { desc = "Move current tab to next position" })
+
