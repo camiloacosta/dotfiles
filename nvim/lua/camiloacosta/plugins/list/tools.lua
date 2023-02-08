@@ -43,6 +43,15 @@ return {
       require"mini.sessions".setup()
     end
   },
+  -- Git Signs
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      signcolumn = true,
+      numhl = false,
+      current_line_blame = true,
+    }
+  },
   -- diffview
   {
     "sindrets/diffview.nvim",
