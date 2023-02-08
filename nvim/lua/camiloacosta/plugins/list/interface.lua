@@ -6,6 +6,19 @@ return {
     config = function ()
       local starter = require"mini.starter"
       starter.setup {
+      header = [[
+     _________
+    / ======= \
+   / __________\      Some inspiring quote generated
+  | ___________ |  automagically, or by some program
+  | | -       | |
+  | |         | |                       – Cris, 2023
+  | |_________| |________________________
+  \=____________/                        )
+  / """"""""""" \                       /
+ / ::::::::::::: \                  =D-'
+(_________________)
+        ]],
         items = {
           starter.sections.sessions(5, true),
           starter.sections.recent_files(10, true, true),
