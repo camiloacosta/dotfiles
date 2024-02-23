@@ -50,3 +50,10 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+eval "$(zoxide init zsh)"
+
+if command -v eza &> /dev/null; then
+  alias ls='eza'
+else
+  echo "eza is not installed"
+fi
